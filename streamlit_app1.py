@@ -1,5 +1,12 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+rand = np.random.normal(1, 2, size=20)
+fig, ax = plt.subplots()
+ax.hist(rand, bins=15) #, color="pink"
+st.pyplot(fig)
 
 st.title('first streamlit 1')
 
