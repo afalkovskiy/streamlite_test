@@ -1,8 +1,8 @@
 import streamlit as st
 
-streamlit.title('first streamlit 1')
+st.title('first streamlit 1')
 
-streamlit.header('This is my header')
-streamlit.text('Sentence number 1. Sentence number 2')
+st.header('This is my header')
+st.text('Sentence number 1. Sentence number 2')
 
 header = st
