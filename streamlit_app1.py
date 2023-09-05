@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.title('first streamlit 1')
 
@@ -16,6 +17,9 @@ with header:
 with dataset:
   st.header('NYC taxi dataset')
   st.text('this dataset is from...')
+
+  taxi_data = pd.read_csv('data/taxi_data.csv')
+  st.write(taxi_data.head())
   
 with features:  
   st.header('These are the features:')
