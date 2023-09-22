@@ -13,11 +13,14 @@ st.write("A = ", a)
 b = st.slider('Select a value of B from [0, 10]', value=1., min_value=0., max_value=10.)
 st.write("B = ", a)
 
-c = st.slider('Select a value of C from [-10, 10]', value=1., min_value=-10., max_value=10.)
+c = st.slider('Select a value of C from [-10, 10]', value=0., min_value=-10., max_value=10.)
 st.write("C = ", c)
 
+d = st.slider('Select a value of C from [-10, 10]', value=0., min_value=-10., max_value=10.)
+st.write("C = ", d)
+
 x = np.arange(0, 4*np.pi, 0.1)
-sinx = a * np.sin(b*(x+c))
+sinx = a * np.sin(b*(x+c)) + d
 cosx = np.cos(x)
 
 chart_data = pd.DataFrame(
