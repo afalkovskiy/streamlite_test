@@ -16,7 +16,7 @@ st.write("B = ", a)
 c = st.slider('Select a value of C from [-10, 10]', value=0., min_value=-10., max_value=10.)
 st.write("C = ", c)
 
-d = st.slider('Select a value of C from [-10, 10]', value=0., min_value=-10., max_value=10.)
+d = st.slider('Select a value of D from [-10, 10]', value=0., min_value=-10., max_value=10.)
 st.write("D = ", d)
 
 x = np.arange(0, 4*np.pi, 0.1)
