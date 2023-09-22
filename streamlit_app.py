@@ -14,12 +14,12 @@ cosx = np.cos(x)
 chart_data = pd.DataFrame(
    {
        "x": x,
-       "sin": sinx,
-       "cos": cosx,
+       "sin": sinx
+       #"cos": cosx,
    }
 )
 
-st.line_chart(chart_data, x="x", y="sin", y="cos" )
+st.line_chart(chart_data, x="x", y="sin",  )
 
 rand = np.random.normal(1, 2, size=20)
 fig, ax = plt.subplots()
