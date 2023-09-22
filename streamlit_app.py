@@ -7,6 +7,7 @@ import numpy as np
 st.title('Plot sin(x)')
 #st.button('Hit me')
 st.subheader("f(x) = a*sin(b(x+c)) + d")
+a = st.slider('Select a from [-10, 10]', min_value=0.0, max_value=10.)
 
 x = np.arange(0, 4*np.pi, 0.1)
 sinx = np.sin(x)
