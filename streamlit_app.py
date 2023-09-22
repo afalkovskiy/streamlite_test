@@ -14,8 +14,8 @@ cosx = np.cos(x)
 chart_data = pd.DataFrame(
    {
        "x": x,
-       "sin": sinx
-       "cos": cosx,
+       "sin": sinx,
+       "cos": cosx
    }
 )
 
