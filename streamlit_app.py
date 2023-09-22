@@ -17,7 +17,7 @@ c = st.slider('Select a value of C from [-10, 10]', value=0., min_value=-10., ma
 st.write("C = ", c)
 
 d = st.slider('Select a value of C from [-10, 10]', value=0., min_value=-10., max_value=10.)
-st.write("C = ", d)
+st.write("D = ", d)
 
 x = np.arange(0, 4*np.pi, 0.1)
 sinx = a * np.sin(b*(x+c)) + d
