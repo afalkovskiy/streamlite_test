@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.title('first streamlit 1')
+st.title('Plot sin(x)')
 #st.button('Hit me')
 
 x = np.arange(0, 4*np.pi, 0.1)
