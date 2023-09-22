@@ -15,11 +15,11 @@ chart_data = pd.DataFrame(
    {
        "x": x,
        "sin": sinx
-       #"cos": cosx,
+       "cos": cosx,
    }
 )
 
-st.line_chart(chart_data, x="x", y="sin",  )
+st.line_chart(chart_data, x="x", y=["sin","cos"] )
 
 rand = np.random.normal(1, 2, size=20)
 fig, ax = plt.subplots()
