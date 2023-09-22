@@ -21,7 +21,6 @@ chart_data = pd.DataFrame(
 
 st.line_chart(chart_data, x="x", y="f(x)", color="cos(x)")
 
-
 rand = np.random.normal(1, 2, size=20)
 fig, ax = plt.subplots()
 ax.hist(rand, bins=15) #, color="pink"
