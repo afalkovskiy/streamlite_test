@@ -6,6 +6,7 @@ import numpy as np
 
 st.title('Plot sin(x)')
 #st.button('Hit me')
+st.subheader("f(x) = a*sin(b(x+c)) + d")
 
 x = np.arange(0, 4*np.pi, 0.1)
 sinx = np.sin(x)
