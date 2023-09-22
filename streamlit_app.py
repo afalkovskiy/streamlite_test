@@ -7,11 +7,14 @@ import numpy as np
 st.title('Plot sin(x)')
 #st.button('Hit me')
 st.subheader("f(x) = A*sin(B(x+C) + D")
-a = st.slider('Select a value of a from [-10, 10]', value=1., min_value=-10., max_value=10.)
-st.write("a = ", a)
+a = st.slider('Select a value of A from [-10, 10]', value=1., min_value=-10., max_value=10.)
+st.write("A = ", a)
+
+b = st.slider('Select a value of B from [0, 10]', value=1., min_value=0., max_value=10.)
+st.write("B = ", a)
 
 x = np.arange(0, 4*np.pi, 0.1)
-sinx = a * np.sin(x)
+sinx = a * np.sin(b*x)
 cosx = np.cos(x)
 
 chart_data = pd.DataFrame(
