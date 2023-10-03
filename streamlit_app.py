@@ -3,6 +3,7 @@ import pandas as pd
 # import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.signal import hilbert
 
 st.title('Plot sin(x)')
 #st.button('Hit me')
