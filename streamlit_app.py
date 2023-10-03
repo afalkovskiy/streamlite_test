@@ -6,7 +6,7 @@ import numpy as np
 
 st.title('Plot sin(x)')
 #st.button('Hit me')
-st.subheader("f(x) = A*sin(B(x+C)) + D")
+st.subheader("f(x) = A*sin(B(x+C)) + D, Oct 3, 2023")
 a = st.slider('Select a value of A from [-10, 10]', value=1., min_value=-10., max_value=10.)
 st.write("A = ", a)
 
