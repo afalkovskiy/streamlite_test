@@ -32,17 +32,21 @@ z= hilbert(sinx) #form the analytical signal
 inst_amplitude = np.abs(z) #envelope extraction
 inst_phase = np.unwrap(np.angle(z))#inst phase
 
+phase = f * pi/180
+x_rotate = math.cos(phase)*z.real - math.sin(phase)*z.imag
+
 
 chart_data = pd.DataFrame(
    {
        "x": x,
        "sin": sinx,
-       #"cos": cosx
-       "cos": inst_amplitude
+       #"cos": cosx  
+       "cos": inst_amplitude,
+       "x_rot": x_rotate
    }
 )
 
-st.line_chart(chart_data, x="x", y=["sin","cos"] )
+st.line_chart(chart_data, x="x", y=["sin","cos", "x_rot"] )
 
 rand = np.random.normal(1, 2, size=20)
 fig, ax = plt.subplots()
