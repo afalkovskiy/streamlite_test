@@ -37,7 +37,8 @@ chart_data = pd.DataFrame(
    {
        "x": x,
        "sin": sinx,
-       "cos": cosx
+       #"cos": cosx
+       "cos": inst_amplitude
    }
 )
 
