@@ -24,6 +24,11 @@ st.write("C = ", c)
 d = st.slider('Select a value of D from [-10, 10]', value=0., min_value=-10., max_value=10.)
 st.write("D = ", d)
 
+z= hilbert(y) #form the analytical signal
+inst_amplitude = np.abs(z) #envelope extraction
+inst_phase = np.unwrap(np.angle(z))#inst phase
+
+
 x = np.arange(0, 4*np.pi, 0.1)
 sinx = a * np.sin(b*(x+c)) + d + np.cos(x)
 cosx = np.cos(x)
