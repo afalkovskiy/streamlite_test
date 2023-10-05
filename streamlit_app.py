@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.signal import hilbert
+import math
 pi = math.pi
 
 st.title('Plot sin(x)')
