@@ -18,7 +18,7 @@ a = st.slider('Select a value of A from [-10, 10]', value=1., min_value=-10., ma
 st.write("A = ", a)
 
 b = st.slider('Select a value of B from [0, 10]', value=1., min_value=0., max_value=10.)
-st.write("B = ", a)
+st.write("B = ", b)
 
 c = st.slider('Select a value of C from [-10, 10]', value=0., min_value=-10., max_value=10.)
 st.write("C = ", c)
@@ -44,7 +44,7 @@ chart_data = pd.DataFrame(
        "sin": sinx,
        #"cos": cosx  
        "cos": inst_amplitude,
-       "x_rot": cosx
+       "x_rot": x_rotate
    }
 )
 
