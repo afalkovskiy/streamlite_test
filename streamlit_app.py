@@ -28,7 +28,7 @@ st.write("D = ", d)
 
 x = np.arange(0, 4*np.pi, 0.1)
 #sinx = a * np.sin(b*(x+c)) + d + np.cos(x)
-sinx = -1 * np.square(x) -5 * x
+sinx = np.square(x) -5 * x
 cosx = np.cos(x)
 
 z= hilbert(sinx) #form the analytical signal
