@@ -27,7 +27,8 @@ d = st.slider('Select a value of D from [-10, 10]', value=0., min_value=-10., ma
 st.write("D = ", d)
 
 x = np.arange(0, 4*np.pi, 0.1)
-sinx = a * np.sin(b*(x+c)) + d + np.cos(x)
+#sinx = a * np.sin(b*(x+c)) + d + np.cos(x)
+sinx = a * np.square(x)
 cosx = np.cos(x)
 
 z= hilbert(sinx) #form the analytical signal
