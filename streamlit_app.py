@@ -9,7 +9,7 @@ pi = math.pi
 
 st.title('Plot sin(x)')
 #st.button('Hit me')
-st.subheader("f(x) = A*sin(B(x+C)) + D, Oct 5, 2023")
+st.subheader("f(x) = A*sin(B(x+C)) + D, Oct 20, 2023")
 
 f = st.slider('Phase rotation angle (deg)', value=0.0, min_value=0., max_value=360.)
 st.write("Phi = ", f)
