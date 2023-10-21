@@ -49,6 +49,7 @@ chart_data = pd.DataFrame(
 )
 
 st.line_chart(chart_data, x="x", y=["sin","cos", "x_rot"] )
+st.line_chart(chart_data, x="x", y=["sin"] )
 
 rand = np.random.normal(1, 2, size=20)
 fig, ax = plt.subplots()
