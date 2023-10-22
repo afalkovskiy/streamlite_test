@@ -45,8 +45,7 @@ chart_data = pd.DataFrame(
        "sin": sinx,
        #"cos": cosx  
        "cos": inst_amplitude,
-       "x_rot": x_rotate,
-         rotation = 90
+       "x_rot": x_rotate
    }
 )
 
@@ -57,6 +56,11 @@ with col1:
 with col2:
    st.line_chart(chart_data, x="x", y=["sin"] )
    st.line_chart(chart_data, x="sin", y=["x"] )
+
+fig = plt.figure(figsize(12,5))
+plt.plot(x, sin)
+st.pyplot(fig)
+
 
 rand = np.random.normal(1, 2, size=20)
 fig, ax = plt.subplots()
