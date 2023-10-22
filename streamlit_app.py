@@ -9,7 +9,7 @@ pi = math.pi
 
 st.title('Plot sin(x)')
 #st.button('Hit me')
-st.subheader("f(x) = A*sin(B(x+C)) + D, Oct 20, 2023")
+st.subheader("f(x) = A*sin(B(x+C)) + D, Oct 21, 2023")
 
 f = st.slider('Phase rotation angle (deg)', value=0.0, min_value=0., max_value=360.)
 st.write("Phi = ", f)
@@ -28,7 +28,7 @@ st.write("D = ", d)
 
 x = np.arange(0, 4*np.pi, 0.1)
 #sinx = a * np.sin(b*(x+c)) + d + np.cos(x)
-sinx = np.square(x) -5 * x
+sinx = np.square(x) -10 * x
 cosx = np.cos(x)
 
 z= hilbert(sinx) #form the analytical signal
