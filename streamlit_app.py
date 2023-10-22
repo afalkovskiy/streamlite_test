@@ -57,7 +57,7 @@ with col2:
    st.line_chart(chart_data, x="x", y=["sin"] )
    st.line_chart(chart_data, x="sin", y=["x"] )
 
-fig = plt.figure(figsize=(12,5))
+fig = plt.figure(1)
 plt.subplot(211)
 plt.plot(x, sinx)
 plt.subplot(212)
