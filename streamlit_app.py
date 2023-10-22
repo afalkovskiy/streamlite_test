@@ -46,7 +46,7 @@ chart_data = pd.DataFrame(
        #"cos": cosx  
        "cos": inst_amplitude,
        "x_rot": x_rotate,
-         rotation = "horizontal"
+         rotation = 90
    }
 )
 
