@@ -58,8 +58,9 @@ with col2:
    st.line_chart(chart_data, x="sin", y=["x"] )
 
 fig = plt.figure(figsize=(12,5))
-plt.plot(x, sinx)
-st.pyplot(fig)
+plt.plot(sinx, x)
+with col3:
+   st.pyplot(fig)
 
 
 rand = np.random.normal(1, 2, size=20)
