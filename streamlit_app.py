@@ -45,7 +45,8 @@ chart_data = pd.DataFrame(
        "sin": sinx,
        #"cos": cosx  
        "cos": inst_amplitude,
-       "x_rot": x_rotate
+       "x_rot": x_rotate,
+         rotation = "horizontal"
    }
 )
 
