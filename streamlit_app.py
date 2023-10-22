@@ -50,10 +50,10 @@ chart_data = pd.DataFrame(
 )
 
 col1, col2, col3 = st.columns(3)
-col1:
+with col1:
    st.line_chart(chart_data, x="x", y=["sin","cos", "x_rot"] )
 
-col2:
+with col2:
    st.line_chart(chart_data, x="x", y=["sin"] )
    st.line_chart(chart_data, x="sin", y=["x"] )
 
