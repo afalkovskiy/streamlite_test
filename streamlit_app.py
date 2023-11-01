@@ -7,7 +7,7 @@ from scipy.signal import hilbert
 import math
 pi = math.pi
 
-st.title('Plot sin(x)')
+st.title('Plot sin(x) Nov 1')
 #st.button('Hit me')
 st.subheader("f(x) = A*sin(B(x+C)) + D, Oct 21, 2023")
 
