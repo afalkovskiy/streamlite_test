@@ -65,6 +65,11 @@ plt.plot(sinx, x)
 
 st.pyplot(fig1)
 
+fig2 = plt.figure(2)
+plt.subplot(111)
+plt.plot(x, sinx)
+
+st.pyplot(fig2)
 
 rand = np.random.normal(1, 2, size=20)
 fig, ax = plt.subplots()
