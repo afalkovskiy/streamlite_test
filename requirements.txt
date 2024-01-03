@@ -4,3 +4,4 @@ Pillow
 matplotlib
 scipy
 streamlit
+lasio
