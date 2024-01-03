@@ -51,7 +51,7 @@ def create_plot(dataframe, curves_to_plot, log_curves=[]):
     # plt.show()
     st.pyplot(fig)
 
-st.title('wells 0')
+st.title('wells')
 st.text('This is a web app to plot well logs')
 # st.markdown('## This is **markdown**')
 
