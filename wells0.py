@@ -2,7 +2,7 @@ print("wells0")
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import plotly_express as px
+# import plotly_express as px
 import lasio as las
 import os
 
