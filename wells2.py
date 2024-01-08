@@ -1,3 +1,4 @@
+print("wells0")
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -75,7 +76,8 @@ def create_plot2(wellnames, dfs_wells, curves_to_plot, log_curves=[]):
     # fig.tight_layout()
     # fig.suptitle(wellname, fontsize=16)
 
-    colorArr = ["tab:blue", "tab:orange", "tab:green"]
+    colorArr = ["tab:blue", "tab:orange", "tab:green", 'tab:red', 'tab:purple', 'tab:brown', 'tab:pink', 'tab:gray', 'tab:olive', 'tab:cyan']
+
 
     for k, well_name in enumerate(wellnames):
         print("************** k = ", k)
@@ -90,28 +92,36 @@ def create_plot2(wellnames, dfs_wells, curves_to_plot, log_curves=[]):
 
             print("num_wells = ", num_wells, "i = ", i, " k = ", k, "i1 = ", i1)
 
-            ax[i1].plot(dataframe[curve], depth_curve, color=colorArr[i%3], linewidth=0.4,alpha=0.8)
+            ax[i1].plot(dataframe[curve], depth_curve, color=colorArr[i%10], linewidth=0.4,alpha=0.8)
 
             # Setup a few plot cosmetics
             # ax[i1].set_title(curve, fontsize=12, fontweight='bold')
 
-            if k % 2==0:
+            if len(curves_to_plot)>1:
 
-                if i==1:
-                    xtitle1 = r"$\bf{" + well_name + "}$" + ' \n' + curve
-                    # xtitle1 = r"${" + well_name + "}$" + ' \n' + curve
+                if k % 2!=0:
+
+                    if i==1:
+                        # xtitle1 = r"$\bf{" + well_name + "}$" + ' \n' + curve
+                        xtitle1 = well_name  + ' \n' + curve
+                    else:
+                        xtitle1 = ' \n' + curve
+
                 else:
-                    xtitle1 = ' \n' + curve
+                    if i==1:
+                        # xtitle1 = r"$\bf{" + well_name + "}$" + ' \n\n' + curve
+                        xtitle1 = well_name  + ' \n\n' + curve
+
+                    else:
+                        xtitle1 = ' \n' + ' \n' + curve
 
             else:
-                if i==1:
-                    xtitle1 = r"$\bf{" + well_name + "}$" + ' \n\n' + curve
-                else:
-                    xtitle1 = ' \n' + ' \n' + curve
+                xtitle1 = well_name  + ' \n' + curve         
 
             ax[i1].set_title(xtitle1, fontsize=5)
             ax[i1].grid(which='major', color='lightgrey', linestyle='-')
-            ax[i1].tick_params(axis='x', rotation=90)
+            ax[i1].tick_params(axis='x', labelsize=4, rotation=60)
+            ax[i1].tick_params(axis='y', labelsize=4)
             for axis in ['top', 'bottom', 'left', 'right']:
                 ax[i1].spines[axis].set_linewidth(0.25)  # change width
                 ax[i1].spines[axis].set_color('black')    # change color
@@ -123,6 +133,7 @@ def create_plot2(wellnames, dfs_wells, curves_to_plot, log_curves=[]):
             # We want to pass in the deepest depth first, so we are displaying the data
             # from shallow to deep
             ax[i1].set_ylim(depth_curve.max(), depth_curve.min())
+
 
             # Only set the y-label for the first track. Hide it for the rest
 
@@ -159,14 +170,15 @@ def create_plot2(wellnames, dfs_wells, curves_to_plot, log_curves=[]):
     st.pyplot(fig)
 
 
-st.title('Wells 2')
+st.title('Well logs cross section')
 # st.markdown('## This is **markdown**')
 
-st.sidebar.title('Navigation')
+
+st.sidebar.title('Navigation menu')
 
 # Initialise empty list for dataframes
 df_list = []
-uploaded_files = st.sidebar.file_uploader("Choose a CSV file", accept_multiple_files=True)
+uploaded_files = st.sidebar.file_uploader("Select LAS file(s)", type=['LAS','las'], accept_multiple_files=True)
 if uploaded_files:
     for uploaded_file in uploaded_files:
         bytes_data = uploaded_file.read()
@@ -260,3 +272,23 @@ if uploaded_files:
 
 
     st.sidebar.write("Number of wells: ", count)
+
+else:
+    st.subheader('Alex Falkovskiy')
+    url = "https://www.rmseismic.com"
+    st.write("RM Seismic Software [rmseismic.com](%s)" % url)
+    st.write('This web app can display well logs for multiple wells as a cross section.')
+    st.write('Use the navigation menu on the left to load LAS files for the wells. Then, from a dropdown menu, select which logs to display.')
+    st.write('The same set of selected logs will be shown for each well.')
+
+    url1 = "https://www.rmseismic.com/lasviewer.html"
+    st.write("More geophysical web apps: [link](%s)" % url1)
+    st.write("A.F., Jan 8, 2024")
+    st.image('logo.png')
+
+      
+
+
+
+
+
