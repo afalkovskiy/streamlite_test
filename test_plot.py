@@ -23,8 +23,8 @@ for i in range(nCol):
     fig.layout.annotations[i].update(text="Subtitle " + str(i+1))
 
 
-# fig.update_layout(height=600, width=800, title_text="Side By Side Subplots")
-fig.update_layout(title_text="Side By Side Subplots")
+fig.update_layout(height=800, width=800, title_text="Side By Side Subplots")
+# fig.update_layout(title_text="Side By Side Subplots")
 # fig.layout.annotations[2].update(text="Stackoverflow")
 # fig.show()
 st.plotly_chart(fig, theme="streamlit", use_container_width=True)
