@@ -8,8 +8,8 @@ st.title('Test plots')
 
 nCol = 6
 
-x = np.linspace(1, 10, 20)
-y = np.linspace(20, 100, 20)
+x1 = np.linspace(1, 10, 20)
+y1 = np.linspace(20, 100, 20)
 print(x)
 print(y)
 
@@ -17,7 +17,7 @@ fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
 for i in range(nCol):
     fig.add_trace(
-        go.Scatter(x, y),
+        go.Scatter(x = x1, y = y1),
         row=1, col=i+1
     )
 
