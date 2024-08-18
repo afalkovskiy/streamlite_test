@@ -9,7 +9,7 @@ nCol = 6
 
 fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
-for i in range(int(nCol)):
+for i in range(int(nCol/2)):
     fig.add_trace(
         go.Scatter(x=[1, 2, 3, 4], y=[4, 5, 6, 85]),
         row=1, col=i*2+1
