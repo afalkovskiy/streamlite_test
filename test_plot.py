@@ -12,7 +12,7 @@ fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 for i in range(nCol):
     fig.add_trace(
         go.Scatter(x=[1, 2 + i**2, 3, 4], y=[4, 15, 30, 85]),
-        row=1, col=i
+        row=1, col=i+1
     )
 
 
