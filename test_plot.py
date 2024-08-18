@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import streamlit as st
 import plotly_express as px
 import numpy as np
-
+st.set_page_config(layout="wide")
 st.title('Test plots')
 
 nCol = 6
