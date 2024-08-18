@@ -9,12 +9,13 @@ st.title('Test plots')
 nCol = 6
 
 x = np.linspace(1, 10)
+y = np.sin(x)
 
 fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
 for i in range(nCol):
     fig.add_trace(
-        go.Scatter(x, np.sin(x)),
+        go.Scatter(x, y),
         row=1, col=i+1
     )
 
