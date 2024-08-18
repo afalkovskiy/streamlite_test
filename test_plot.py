@@ -9,16 +9,12 @@ nCol = 6
 
 fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
-for i in range(int(nCol/2)):
+for i in range(nCol):
     fig.add_trace(
-        go.Scatter(x=[1, 2, 3, 4], y=[4, 5, 6, 85]),
-        row=1, col=i*2+1
+        go.Scatter(x=[1, 2 + i**2, 3, 4], y=[4, 15, 30, 85]),
+        row=1, col=i
     )
 
-    fig.add_trace(
-        go.Scatter(x=[20, 30, 40], y=[50 + i**2, 60 + i**2, 70]),
-        row=1, col=i*2 + 2
-    )
 
 fig.update_layout(height=600, width=800, title_text="Side By Side Subplots")
 # fig.show()
