@@ -10,6 +10,8 @@ nCol = 6
 
 x = np.linspace(1, 10, 20)
 y = np.linspace(20, 100, 20)
+print(x)
+print(y)
 
 fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
