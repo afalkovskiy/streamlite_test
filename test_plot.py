@@ -19,7 +19,6 @@ for i in range(nCol):
         go.Scatter(x = y1, y = x1),
         row=1, col=i+1
     )
-    fig.lay
 
 
 fig.update_layout(height=600, width=800, title_text="Side By Side Subplots")
