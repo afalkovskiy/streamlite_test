@@ -11,7 +11,7 @@ nCol = 6
 x1 = np.linspace(1, 10, 20)
 
 print(x1)
-print(y1)
+
 
 fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
