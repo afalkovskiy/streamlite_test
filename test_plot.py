@@ -8,7 +8,7 @@ st.title('Test plots')
 
 nCol = 6
 
-x1 = np.linspace(1, 10, 20)
+x1 = np.linspace(1, 10, 200)
 
 print(x1)
 
