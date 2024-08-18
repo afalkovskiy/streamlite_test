@@ -10,9 +10,6 @@ nCol = 6
 
 x1 = np.linspace(1, 10, 200)
 
-print(x1)
-
-
 fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
 for i in range(nCol):
