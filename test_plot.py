@@ -9,7 +9,7 @@ st.title('Test plots')
 nCol = 6
 
 x = np.linspace(1, 10)
-y = np.sin(x)
+y = np.linspace(20, 100)
 
 fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
