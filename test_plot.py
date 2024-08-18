@@ -16,8 +16,8 @@ print(y1)
 fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
 for i in range(nCol):
+    y1 = np.sin(x1)**i
     fig.add_trace(
-        y1 = np.sin(x1)**i
         go.Scatter(x = x1, y = y1),
         row=1, col=i+1
     )
