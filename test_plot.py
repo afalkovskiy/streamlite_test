@@ -2,16 +2,19 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import streamlit as st
 import plotly_express as px
+import numpy as np
 
 st.title('Test plots')
 
 nCol = 6
 
+x = np.linspace(1, 10)
+
 fig = make_subplots(rows=1, cols=nCol, shared_yaxes=True)
 
 for i in range(nCol):
     fig.add_trace(
-        go.Scatter(x=[1, 2 + i**2, 3, 4], y=[4, 15, 30, 85]),
+        go.Scatter(x, np.sin(x)),
         row=1, col=i+1
     )
 
