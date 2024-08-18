@@ -16,7 +16,7 @@ for i in range(int(nCol/2)):
     )
 
     fig.add_trace(
-        go.Scatter(x=[20, 30, 40], y=[50, 60, 70]),
+        go.Scatter(x=[20, 30, 40], y=[50 + i**2, 60 + i**2, 70]),
         row=1, col=i*2 + 2
     )
 
