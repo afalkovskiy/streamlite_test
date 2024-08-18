@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import streamlit as st
 import plotly_express as px
 
-st.title('Well logs cross section')
+st.title('Test plots')
 
 
 fig = make_subplots(rows=1, cols=2, shared_yaxes=True)
