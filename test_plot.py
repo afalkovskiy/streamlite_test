@@ -21,7 +21,7 @@ for i in range(nCol):
     )
 
     fig.layout.annotations[i].update(text="Subtitle " + str(i+1))
-    fig.update_yaxes(title_text='yaxes title', showgrid=True, range=[10,0], row=1, col=i+1)
+    fig.update_yaxes(title_text='yaxes title', mirror=True, showgrid=True, range=[10,0], row=1, col=i+1)
 
 
 fig.update_layout(height=800, width=800, title_text="Side By Side Subplots")
