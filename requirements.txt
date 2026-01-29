@@ -1,2 +1,9 @@
+numpy
+pandas
+Pillow
+matplotlib
+scipy
 streamlit
+lasio 
+
 
