@@ -1,8 +1,8 @@
+streamlit
 numpy
 pandas
 matplotlib
 scipy
-streamlit
 lasio 
 
 
